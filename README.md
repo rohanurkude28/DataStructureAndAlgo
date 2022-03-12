@@ -44,3 +44,10 @@ If there are duplicates in the array and the relative order of equal elements is
 - Splitting and merge.
 - Split till 1 element array and merge them back (while sorting) into original size, keep on doing till sorting is complete
 - Stable Algorithm
+
+## _Quick Sort - O(nlogn)_
+- Divide and Conquer Algorithm - recursive
+- Uses Pivot to partition the array
+- Put all element smaller than the pivot to left, larger than pivot to the right, pivot is in correct sortedPosition
+- Worst is O(n^2)
+- Unstable Algorithm

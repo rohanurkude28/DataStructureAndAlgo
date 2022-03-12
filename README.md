@@ -57,3 +57,9 @@ If there are duplicates in the array and the relative order of equal elements is
 - Doesn't compare, works only with positive numbers , Will have to create an array with maxValue present better for smaller range
 - Creates a tempArray and increments count at index for a particular value in input. for eg: val 10, increment count at index 10
 - Unstable Algorithm
+
+## _Radix Sort - O(n)_
+- Assumes range of number present, data has same radix(Binary: 2, Alphabet:26) and width(Number of chars in each data)
+- Works only with integers or strings , Sort based on each individual digit or letter position
+- Start at the rightmost position 
+- Stable (Counting) Algorithm

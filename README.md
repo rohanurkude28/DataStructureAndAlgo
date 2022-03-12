@@ -51,3 +51,9 @@ If there are duplicates in the array and the relative order of equal elements is
 - Put all element smaller than the pivot to left, larger than pivot to the right, pivot is in correct sortedPosition
 - Worst is O(n^2)
 - Unstable Algorithm
+
+## _Counting Sort - O(n)_
+- Assumes range of number present
+- Doesn't compare, works only with positive numbers , Will have to create an array with maxValue present better for smaller range
+- Creates a tempArray and increments count at index for a particular value in input. for eg: val 10, increment count at index 10
+- Unstable Algorithm

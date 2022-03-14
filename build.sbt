@@ -8,4 +8,4 @@ lazy val root = (project in file("."))
   .settings(
     name := "DataStructureAndAlgo",
     libraryDependencies += scalaTest % Test
-  )
+)

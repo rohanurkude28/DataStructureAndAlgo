@@ -1,7 +1,5 @@
 # Data structures and Algorithms
 
-![](src/main/resources/SortingAlgorithmComplexity.png)
-
 ## Arrays
 - Contiguous Block of memory
 - Each array is allocated same memory (in case of objects references are stored)
@@ -11,6 +9,8 @@
 ![](src/main/resources/ArrayBigO.png)
 
 ## Sorting Algorithms
+
+![](src/main/resources/SortingAlgorithmComplexity.png)
 
 ## _Stable vs Unstable_
 

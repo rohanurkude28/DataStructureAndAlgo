@@ -103,4 +103,4 @@ If there are duplicates in the array and the relative order of equal elements is
 - There are two ways to handle collision - Linear Probing and Chaining
 
 
-## [![Questions N Solutions](https://docs.google.com/spreadsheets/d/1d-ueLUj5EobrrSqHjPFt7JAGdLCigpmf/edit?usp=sharing&ouid=118312714712482182378&rtpof=true&sd=true)
+## [Questions N Solutions] : <https://docs.google.com/spreadsheets/d/1d-ueLUj5EobrrSqHjPFt7JAGdLCigpmf/edit?usp=sharing&ouid=118312714712482182378&rtpof=true&sd=true>

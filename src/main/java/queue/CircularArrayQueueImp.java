@@ -1,29 +1,38 @@
 package queue;
 
-import stack.ArrayStack;
-
 import java.util.Arrays;
 import java.util.EmptyStackException;
 import java.util.NoSuchElementException;
 
-public class ArrayQueue<T> {
+public class CircularArrayQueueImp<T> {
 
     private T[] queue;
     private int front;
     private int back;
 
-    public ArrayQueue(int capacity) {
+    public CircularArrayQueueImp(int capacity) {
         queue = (T[])new Object[capacity];
     }
 
     public void add(T obj){
-        if(queue.length == back){
+        if(size() == queue.length-1){
+            int numItem = size();
+
             System.out.println("Increasing size to: "+queue.length*2);
             T[] newQueue = (T[])new Object[queue.length*2];
-            System.arraycopy(queue,0,newQueue,0,queue.length);
+            System.arraycopy(queue,front,newQueue,0,queue.length-front);
+            System.arraycopy(queue,0,newQueue,queue.length-front,back);
             queue = newQueue;
+
+            front=0;
+            back=numItem;
         }
-        queue[back++]= obj;
+        queue[back]= obj;
+        if(back< queue.length-1){
+            back++;
+        }
+        else back=0;
+
         System.out.println("Added Data to Queue");
     }
 
@@ -37,6 +46,9 @@ public class ArrayQueue<T> {
             front=0;
             back=0;
         }
+        else if(front==queue.length){
+            front=0;
+        }
         return data;
     }
 
@@ -47,11 +59,14 @@ public class ArrayQueue<T> {
     }
 
     public boolean isEmpty(){
-        return back ==0;
+        return back ==0 && front ==0;
     }
 
     public int size(){
-        return back-front;
+        if(front<=back){
+            return back-front;
+        }
+        return back-front+ queue.length;
     }
 
     @Override
@@ -64,29 +79,29 @@ public class ArrayQueue<T> {
     }
 
     public static void main(String[] args) {
-        ArrayQueue<String> aq = new ArrayQueue<>(1);
+        CircularArrayQueueImp<String> aq = new CircularArrayQueueImp<>(2);
         aq.add("Hello");
+        System.out.println(aq);
         aq.add("World");
+        aq.remove();
+        System.out.println(aq);
         aq.add("!!");
+        aq.remove();
+        System.out.println(aq);
         aq.add("How");
+        System.out.println(aq.isEmpty());
+        System.out.println(aq);
         aq.add("Are");
+        aq.remove();
+        System.out.println(aq);
         aq.add("You");
+        aq.remove();
+        System.out.println(aq);
         aq.add("?");
-
+        System.out.println(aq);
+        aq.remove();
         System.out.println(aq);
 
-        System.out.println(aq.remove());
-
-        System.out.println("After Remove: "+aq);
-
-        System.out.println(aq.peek());
-
-        System.out.println("After Peek: "+aq);
-
-        System.out.println(aq.remove());
-
-        System.out.println("After Remove: "+aq);
-
-        System.out.println("Array Queue size: "+aq.size());
+        System.out.println(aq);
     }
 }

@@ -1,7 +1,7 @@
 package list;// A complete working Java program to demonstrate all
 
 // Class for Doubly Linked List
-public class DoublyLinkedList {
+public class DoublyLinkedImp {
 	Node head; // head of list
 
 	/* Doubly Linked list Node*/
@@ -147,7 +147,7 @@ public class DoublyLinkedList {
 	public static void main(String[] args)
 	{
 		/* Start with the empty list */
-		DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+		DoublyLinkedImp doublyLinkedList = new DoublyLinkedImp();
 
 		// Insert 6. So linked list becomes 6->NULL
 		doublyLinkedList.append(6);

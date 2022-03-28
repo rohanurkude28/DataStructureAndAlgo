@@ -68,6 +68,12 @@ If there are duplicates in the array and the relative order of equal elements is
 - Start at the rightmost position 
 - Stable (Counting) Algorithm
 
+### _Bucket Sort - O(n)_
+- Uniformity assumptions means that each bucket will have only a few (maybe n) elements after the pass.
+- Work on hashing
+- Start at the rightmost position
+- Unstable (Counting) Algorithm
+- Collection.sort uses Adaptive merge sort where as arrays.sort uses double pivot quick sort
 
 ## LinkedList
 
@@ -90,3 +96,11 @@ If there are duplicates in the array and the relative order of equal elements is
 - Can be implemented by using Arrays and LinkedList
 - LinkedList is better provided we can use its direct function, we don't need to resize it
 - FIFO logic
+
+## Hashtables
+- Runs on principle of hashing on key and storing values in respective bucket
+- There can be hash collision, hence hash calculation is important
+- There are two ways to handle collision - Linear Probing and Chaining
+
+
+## [![Questions N Solutions](https://docs.google.com/spreadsheets/d/1d-ueLUj5EobrrSqHjPFt7JAGdLCigpmf/edit?usp=sharing&ouid=118312714712482182378&rtpof=true&sd=true)

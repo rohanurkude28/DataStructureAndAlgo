@@ -1,14 +1,12 @@
 package stack;
 
-import java.util.Arrays;
-import java.util.EmptyStackException;
 import java.util.LinkedList;
 
-public class LinkedListStack<T> {
+public class LinkedListStackImp<T> {
 
     private LinkedList<T> stack;
 
-    public LinkedListStack() {
+    public LinkedListStackImp() {
         stack = new LinkedList<>();
     }
 
@@ -34,7 +32,7 @@ public class LinkedListStack<T> {
     }
 
     public static void main(String[] args) {
-        LinkedListStack<String> as = new LinkedListStack<>();
+        LinkedListStackImp<String> as = new LinkedListStackImp<>();
         as.push("Hello");
         as.push("World");
         as.push("!!");

@@ -3,7 +3,7 @@ package list;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArrayListDs {
+public class ArrayListImp {
 
     public static void main(String[] args) {
 

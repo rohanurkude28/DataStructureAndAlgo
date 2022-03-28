@@ -3,12 +3,12 @@ package stack;
 import java.util.Arrays;
 import java.util.EmptyStackException;
 
-public class ArrayStack<T> {
+public class ArrayStackImp<T> {
 
     private T[] stack;
     private int top;
 
-    public ArrayStack(int capacity) {
+    public ArrayStackImp(int capacity) {
         stack = (T[])new Object[capacity];
     }
 
@@ -47,7 +47,7 @@ public class ArrayStack<T> {
     }
 
     public static void main(String[] args) {
-        ArrayStack<String> as = new ArrayStack<>(1);
+        ArrayStackImp<String> as = new ArrayStackImp<>(1);
         as.push("Hello");
         as.push("World");
         as.push("!!");

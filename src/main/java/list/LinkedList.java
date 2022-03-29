@@ -211,6 +211,26 @@ public class LinkedList {
     // **************MAIN METHOD**************
 
     // method to create a Singly linked list with n nodes
+
+    static Node middleNode(Node start, Node last)
+    {
+        if (start == null)
+            return null;
+
+        Node slow = start;
+        Node fast = start.next;
+
+        while (fast != last)
+        {
+            fast = fast.next;
+            if (fast != last)
+            {
+                slow = slow.next;
+                fast = fast.next;
+            }
+        }
+        return slow;
+    }
     public static void main(String[] args)
     {
         /* Start with the empty list. */
@@ -232,6 +252,9 @@ public class LinkedList {
 
         // Print the LinkedList
         printList(linkedList);
+
+        Node last = null;
+        System.out.println("Middle of List is: "+middleNode(linkedList.head,last).data);
 
         //
         // ******DELETION BY KEY******

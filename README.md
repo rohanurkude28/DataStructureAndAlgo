@@ -102,5 +102,10 @@ If there are duplicates in the array and the relative order of equal elements is
 - There can be hash collision, hence hash calculation is important
 - There are two ways to handle collision - Linear Probing and Chaining
 
+## Binary Search Tree
+- Can perform insertion, deletion, retrieval in O(logn)
+- Left child always has smaller value than its parent
+- Right child always has larger value than its parent
+- Already sorted data will result in O(n) complexity
 
-## [Questions N Solutions] : <https://docs.google.com/spreadsheets/d/1d-ueLUj5EobrrSqHjPFt7JAGdLCigpmf/edit?usp=sharing&ouid=118312714712482182378&rtpof=true&sd=true>
+## [Questions N Solutions](![](src/main/resources/questions/FINAL450.xlsx))

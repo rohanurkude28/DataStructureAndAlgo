@@ -1,15 +1,16 @@
 package list;
 
 public class LinkedList {
-    Node head; // head of list
+
+    public Node head; // head of list
 
     // Linked list Node.
     // Node is a static nested class
     // so main() can access it
-    static class Node {
+    public static class Node {
 
-        int data;
-        Node next;
+        public int data;
+        public Node next;
 
         // Constructor
         Node(int d)
@@ -17,7 +18,22 @@ public class LinkedList {
             data = d;
             next = null;
         }
+
+//        @Override
+//        public String toString() {
+//            return "Node{" +
+//                    "data=" + data +
+//                    ", next=" + next +
+//                    '}';
+//        }
     }
+
+//    @Override
+//    public String toString() {
+//        return "LinkedList{" +
+//                "head=" + head +
+//                '}';
+//    }
 
     // **************INSERTION**************
 
@@ -231,8 +247,8 @@ public class LinkedList {
         }
         return slow;
     }
-    public static void main(String[] args)
-    {
+
+    public static LinkedList createLinkedList(){
         /* Start with the empty list. */
         LinkedList linkedList = new LinkedList();
 
@@ -249,6 +265,14 @@ public class LinkedList {
         linkedList = insert(linkedList, 6);
         linkedList = insert(linkedList, 7);
         linkedList = insert(linkedList, 8);
+
+        return linkedList;
+    }
+
+    public static void main(String[] args)
+    {
+        /* Start with the empty list. */
+        LinkedList linkedList = createLinkedList();
 
         // Print the LinkedList
         printList(linkedList);

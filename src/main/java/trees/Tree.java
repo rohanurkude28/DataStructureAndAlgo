@@ -1,5 +1,7 @@
 package trees;
 
+import java.util.HashMap;
+
 public class Tree {
     private TreeNode root;
 
@@ -60,6 +62,7 @@ public class Tree {
         intTree.insert(25);
         intTree.insert(20);
         intTree.insert(15);
+        intTree.insert(16);
         intTree.insert(27);
         intTree.insert(30);
         intTree.insert(29);
@@ -77,7 +80,7 @@ public class Tree {
         System.out.println(intTree.max());
         System.out.println(intTree.min());
 
-        intTree.delete(20);
+        intTree.delete(15);
         intTree.traverseInOrder();
         System.out.println("");
     }

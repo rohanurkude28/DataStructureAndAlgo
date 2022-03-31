@@ -28,12 +28,14 @@ public class QuickSort {
         while (i < j) {
             //NOTE: Empty Loop body, just traversing j left to right
             while (i < j && arr[--j] >= pivot);
+
             if (i < j) {
                 arr[i] = arr[j];
             }
 
             //NOTE: Empty Loop body, just traversing i right to left
             while (i < j && arr[++i] <= pivot);
+
             if (i < j) {
                 arr[j] = arr[i];
             }

@@ -5,6 +5,7 @@ import static common.Utility.*;
 public class MergeSort {
     public static void main(String[] args) {
         int arr[] = uniqueIntArr;
+
         doMergeSort(arr,0,arr.length);
         printArray(arr);
     }
@@ -21,7 +22,7 @@ public class MergeSort {
     }
 
     private static void doMerge(int[] arr, int start, int mid, int end) {
-        if (arr[mid - 1] <= arr[mid]) return;
+        if (arr[mid - 1] <= arr[mid]) return; // Last element in left array and first element in right array is in order indicating sorted array
 
         int i = start;
         int j = mid;

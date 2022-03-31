@@ -5,8 +5,9 @@ import static common.Utility.*;
 public class InsertionSort {
     public static void main(String[] args) {
         int[] arr = uniqueIntArr;
-        //doInsertionSortTraditional(arr);
-        doInsertionSort(arr,1);
+        doInsertionSortTraditional(arr);
+        //doInsertionSort(arr,1);
+        doInsertionSortWhile(arr);
         printArray(arr);
     }
 
@@ -18,6 +19,20 @@ public class InsertionSort {
                 arr[i] = arr[i - 1];
             }
             arr[i] = newElement;
+        }
+    }
+
+    private static void doInsertionSortWhile(int[] arr){
+        for(int i =1 ; i<arr.length-1;i++){
+            int currentVal  = arr[i];
+
+            int j = i-1;
+            while (j>=0 && arr[j]>currentVal){
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1] = currentVal;
+
         }
     }
 

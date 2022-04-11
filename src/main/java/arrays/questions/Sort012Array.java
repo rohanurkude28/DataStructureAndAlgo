@@ -30,6 +30,25 @@ public class Sort012Array {
         }
     }
 
+    static void sort012Arr(int a[], int n)
+    {
+        int count0,count1,count2;
+        count0=count1=count2=0;
+        for(int i=0;i<n;i++){
+            switch(a[i]){
+                case 0 : count0++;
+                case 1 : count1++;
+                case 2 : count2++;
+            }
+        }
+
+        for(int i=0;i<n;i++){
+            if(count0>0) {a[i]=0; count0--;}
+            else if(count1>0) {a[i]=1; count1--;}
+            else a[i]=2;
+        }
+    }
+
     static void countNSortArr(int arr[], int n)
     {
         int i, cnt0 = 0, cnt1 = 0, cnt2 = 0;
@@ -73,7 +92,10 @@ public class Sort012Array {
 
     public static void main(String[] args) {
         //sort012(arrOf012,arrOf012.length);
-        countNSortArr(arrOf012,arrOf012.length);
+        //countNSortArr(arrOf012,arrOf012.length);
+        sort012Arr(arrOf012,arrOf012.length);
         System.out.println(Arrays.toString(arrOf012));
+
+
     }
 }

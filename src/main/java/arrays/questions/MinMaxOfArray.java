@@ -5,8 +5,15 @@ import static common.Utility.uniqueIntArr;
 public class MinMaxOfArray {
 
     static class Pair {
-        int min;
-        int max;
+        long min;
+        long max;
+
+        public Pair(){}
+
+        public Pair(long min, long max) {
+            this.min = min;
+            this.max = max;
+        }
 
         @Override
         public String toString() {
@@ -15,11 +22,6 @@ public class MinMaxOfArray {
                     ", max=" + max +
                     '}';
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(getMinMaxPair(uniqueIntArr));
-        System.out.println(getMinMaxPairRecursive(uniqueIntArr,0,uniqueIntArr.length-1));
     }
 
     public static Pair getMinMaxPair(int[] arr) {
@@ -86,6 +88,49 @@ public class MinMaxOfArray {
         }
 
         return minMax;
+    }
+
+
+
+    static Pair getMinMax(long a[], long n)
+    {
+        long min=Integer.MAX_VALUE;
+        long max=Integer.MIN_VALUE;
+        Pair minMax = null;
+        if (a.length == 1) {
+            min=a[0];
+            max=a[0];
+        }
+
+        if (a[0] > a[1]) {
+            min=a[1];
+            max=a[0];
+        } else {
+            min=a[0];
+            max=a[1];
+        }
+
+
+        for (int i = 2; i < a.length; i++) {
+            if (a[i] > max) {
+                max = a[i];
+            } else if (a[i] < min) {
+                min = a[i];
+            }
+        }
+
+        minMax = new Pair(min,max);
+        return minMax;
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println(getMinMaxPair(uniqueIntArr));
+        System.out.println(getMinMaxPairRecursive(uniqueIntArr,0,uniqueIntArr.length-1));
+
+        long[] arr ={3,2,1,56,1000,167};
+        System.out.println(getMinMax(arr,6));
+
     }
 
 }
